@@ -1,0 +1,10 @@
+树莓派安装libgtk2.0-dev失败的解决方法
+
+
+       今天晚上因为做人脸识别要用到OpenCV，安装OpenCV又要用到libgtk2.0-dev。无奈，libgtk2.0-dev总是安装失败，各种依赖缺失，还有好多软件将要安装。
+
+        在网上找了好多博客，最后终于找到一篇能够解决我遇到的问题。
+
+        使用sudo apt-get install libgtk2.0-dev命令已经不能安装该包。此时需要降级安装。使用命令sudo aptitude install libgtk2.0-dev。
+
+        在使用该命令时需要注意，在最开始出现选择Y/n/q/？时要选择‘n’。这样才是降级安装。不然还是会安装失败。之后就可以一路选‘Y’了。
